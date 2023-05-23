@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  color: white;
+  border-width: 0;
+  padding: 15px;
+  cursor: pointer;
+  background-color: blueviolet;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+cite {
+  font-style: normal;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: blueviolet;
+}
+
+a {
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+.active-link {
+  color: azure;
+}
+
+.main-text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px 15px;
+}
+
+h1 {
+  margin: 40px;
+}
+body {
+  margin: 0;
+}
+.blog-page {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 40px;
+}
+.posts-list {
+  margin-left: 40px;
+}
+.post {
+  color: darkblue;
+}
+.edit-post {
+  display: inline-block;
+  margin: 10px;
+  padding: 0 10px;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+.go-back-button {
+  margin: 10px;
+}
