@@ -10,14 +10,14 @@ import BlogPage from "./components/pages/BlogPage";
 import SinglePage from "./components/pages/SinglePage";
 import EditPost from "./components/pages/EditPost";
 import NotfoundPage from "./components/pages/NotfoundPage";
-import "./index.scss";
 import Layout from "./components/Layout";
 import Loginpage from "./components/pages/Loginpage";
 import RequireAuth from "./hoc/RequireAuth";
 import AuthProvider from "./hoc/AuthProvider";
-import CreatePost from "./components/pages/CreatePost";
+import CreateComment from "./components/pages/CreateComment";
 import { blogLoader } from "./components/pages/BlogPage";
 import { postLoader } from "./components/pages/SinglePage";
+import "./index.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
         path="blog/new"
         element={
           <RequireAuth>
-            <CreatePost />
+            <CreateComment />
           </RequireAuth>
         }
       />

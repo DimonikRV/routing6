@@ -1,12 +1,12 @@
 import { useAuth } from "../../hook/useAuth";
 import { useNavigate } from "react-router-dom";
-const CreatePost = () => {
+const CreateComment = () => {
   const { signout } = useAuth();
   const navigate = useNavigate();
 
   return (
     <>
-      <h1>Create Post</h1>
+      <h1>Create Comment</h1>
       <button
         onClick={() => {
           signout(() => navigate("/", { replace: true }));
@@ -17,4 +17,4 @@ const CreatePost = () => {
     </>
   );
 };
-export default CreatePost;
+export default CreateComment;

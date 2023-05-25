@@ -3,7 +3,7 @@ import { fetchPost } from "../../gateways/gateways";
 
 export const postLoader = async ({ params }) => {
   const id = params.id;
-  const post = await fetchPost(id);
+  const { post } = await fetchPost(id);
   return { post, id };
 };
 
@@ -21,7 +21,7 @@ const SinglePage = () => {
       <p>{post.body}</p>
       <Link to="/blog/new">
         <button type="button" className="edit-post">
-          {`Edit post ${id}`}
+          {`Edit comment ${id}`}
         </button>
       </Link>
     </div>
