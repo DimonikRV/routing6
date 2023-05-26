@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const fetchPost = async (id) => {
   const response = await axios.get(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
+    `https://jsonplaceholder.typicode.com/postss/${id}`
   );
   const post = response.data;
 
@@ -11,7 +11,8 @@ export const fetchPost = async (id) => {
 
 export const fetchPosts = async () => {
   const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts"
+    "https://jsonplaceholder.typicode.com/postss"
   );
+
   return response.data;
 };

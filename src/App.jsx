@@ -15,6 +15,7 @@ import Loginpage from "./components/pages/Loginpage";
 import RequireAuth from "./hoc/RequireAuth";
 import AuthProvider from "./hoc/AuthProvider";
 import CreateComment from "./components/pages/CreateComment";
+import ErrorComponent from "./components/ErrorComponent";
 import { blogLoader } from "./components/pages/BlogPage";
 import { postLoader } from "./components/pages/SinglePage";
 import "./index.scss";
@@ -24,8 +25,18 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<HomePage />} />
       <Route path="about" element={<About />} />
-      <Route path="blog" element={<BlogPage />} loader={blogLoader} />
-      <Route path="blog/:id" element={<SinglePage />} loader={postLoader} />
+      <Route
+        path="blog"
+        element={<BlogPage />}
+        loader={blogLoader}
+        errorElement={<ErrorComponent />}
+      />
+      <Route
+        path="blog/:id"
+        element={<SinglePage />}
+        loader={postLoader}
+        errorElement={<ErrorComponent />}
+      />
       <Route path="blog/:id/edit" element={<EditPost />} />
       <Route
         path="blog/new"

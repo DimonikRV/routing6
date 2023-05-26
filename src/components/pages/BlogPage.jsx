@@ -9,8 +9,8 @@ import {
 import BlogFilter from "../BlogFilter";
 import { fetchPosts } from "../../gateways/gateways";
 
-export const blogLoader = async () => {
-  const posts = await fetchPosts();
+export const blogLoader = () => {
+  const posts = fetchPosts();
   return defer({
     posts,
   });

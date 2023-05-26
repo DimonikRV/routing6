@@ -2,9 +2,17 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { fetchPost } from "../../gateways/gateways";
 
 export const postLoader = async ({ params }) => {
-  const id = params.id;
-  const { post } = await fetchPost(id);
-  return { post, id };
+  try {
+    const id = params.id;
+    const { post } = await fetchPost(id);
+    return { post, id };
+  } catch (error) {
+    throw new Response("", {
+      status: error.response.status,
+      statusText: error.response.statusText,
+      message: error.message,
+    });
+  }
 };
 
 const SinglePage = () => {
